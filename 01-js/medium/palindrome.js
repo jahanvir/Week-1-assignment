@@ -5,9 +5,11 @@
   Once you've implemented the logic, test your code by running
   - `npm run test-palindrome`
 */
-
 function isPalindrome(str) {
-  return true;
+  str=str.replace(/[^\w]|_/g, '').toLowerCase();
+  rev=str.split('').reverse().join('');
+  console.log(rev);
+  return str === rev;
 }
 
 module.exports = isPalindrome;
